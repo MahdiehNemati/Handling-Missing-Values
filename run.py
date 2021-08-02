@@ -18,3 +18,9 @@ df1.dropna()
 # remove all columns with at least one missing value
 columns_with_na_dropped = df1.dropna(axis=1)
 columns_with_na_dropped.head()
+# lost quit large number of data! at the begining 102 columns and now 41 columns
+# filling in missing values
+# it is good idea to see data types
+df1.info()
+# replace all None's with 0
+df1.fillna(0)
