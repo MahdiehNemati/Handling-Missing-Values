@@ -24,3 +24,10 @@ columns_with_na_dropped.head()
 df1.info()
 # replace all None's with 0
 df1.fillna(0)
+# to test the code
+missing_values_count = df1.isnull().sum()
+missing_values_count_20col0 = missing_values_count[0:20]
+# replace missing values with whatever value comes directly after it in the same column.
+# replace all None's the value that comes directly after it in the same column
+# then replace all the reamining None's with 0
+df1.fillna(method='bfill', axis=0).fillna(0)
